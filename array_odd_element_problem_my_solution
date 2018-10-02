@@ -1,0 +1,10 @@
+# puts "this is a debug message"
+
+def solution(a)
+  b = a.group_by {|a| a}.values
+  b.each do |x|
+    if x.length < 2
+      return x[0]
+    end
+  end
+end

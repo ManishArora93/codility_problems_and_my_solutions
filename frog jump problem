@@ -1,0 +1,8 @@
+def solution(x, y, d)
+  minimal_jumps = (d - x)/y
+  if (d -x)%y != 0 
+    minimal_jumps = minimal_jumps + 1
+  else
+    minimal_jumps
+  end
+end
