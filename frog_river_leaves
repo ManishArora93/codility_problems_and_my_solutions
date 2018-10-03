@@ -1,0 +1,10 @@
+def frog_river_one(x, a)
+  leaves = {}
+
+  a.each_with_index do |leaf, i|
+    leaves[leaf] = true
+    return i if leaves.size == x
+  end
+
+  -1
+end
