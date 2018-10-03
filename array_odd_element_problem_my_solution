@@ -1,10 +1,6 @@
 # puts "this is a debug message"
 
-def solution(a)
-  b = a.group_by {|a| a}.values
-  b.each do |x|
-    if x.length < 2
-      return x[0]
-    end
-  end
+ def solution(a)
+  # write your code in Ruby 2.2
+  odd_element = a.group_by {|a| a}.values.select {|a| a.length < 2 || a.length%2 != 0 }.first.first
 end
