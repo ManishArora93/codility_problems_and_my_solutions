@@ -1,22 +1,12 @@
-# you can write to stdout for debugging purposes, e.g.
-# puts "this is a debug message"
-
 def solution(a)
-  largest_element = a.max
-  smallest_element = a.min
-  if a.uniq.length < a.length
-    return 0
-  elsif a.length == 2 and ((largest_element - smallest_element) != 1)
-    return 0
-  end
-  a.each do |element|
-    if a.length > 2
-        #if a.group_by {|a| a}.values.select {|a| a.length > 1}.length > 0
-      closest_elements = a.select {|x| (element - x) == 1 || (element - x) == -1 }
-      if closest_elements.length < 2 and element != largest_element and element != smallest_element
-        return 0
-      end
-    end
-  end
-  return 1
+
+  alternative solution
+  seen = {} 
+  a.each do |v|
+     seen[v] = true
+   end  
+   a.size.times do |n|
+     return 0 if seen[n+1].nil?
+   end
+   1
 end
